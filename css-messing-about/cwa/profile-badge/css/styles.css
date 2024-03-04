@@ -1,0 +1,47 @@
+body {
+    background-color: #dbd6cd;
+    background-image: url("../images/geometry.jpg");
+    background-size: cover;
+}
+
+.badge {
+    width: 260px;
+    /* height: 500px; */
+    background-color: #fff;
+    color: #2f2f2f;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    margin: 100px auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: rgba(23,23,23,0.25) 1px 3px 5px -1px, 
+    rgba(0,0,0,0.3) 0 1px 3px -1px;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+/* IMAGES IN BADGE */
+
+.headshot {
+    width: 130px;
+    border-radius: 50%;
+}
+
+.linkedIn, .gmail {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.badge a {
+    margin: 8px 8px 0px 8px;
+    display: inline-block;
+}
+
+a:link {
+    text-decoration: none;
+}
