@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tables</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <section class="wrapper">
+        <h1>Responsive Tables</h1>
+            <table>
+                <!-- Captions have to be first child of table -->
+                <caption>The Last 14 EFL Championship League Winners</caption>
+                <tr>
+                    <th>Year</th>
+                    <th>Club</th>
+                    <th>Points </th>
+                    <th>Runner Up</th>
+                    <th>Playoffs Winner</th>
+                    <th>Relegated Clubs</th>
+                </tr>
+                <tr>
+                    <td data-cell="year">2022-23</td> <!-- year -->
+                    <td data-cell="champion">Burley</td>  <!-- champion -->
+                    <td data-cell="points">101</td> <!-- points total -->
+                    <td data-cell="runners-up">Sheffield United</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Luton Town</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Reading, Blackpool, Wigan Athletic</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2021-22</td> <!-- year -->
+                    <td data-cell="champion">Fulham</td> <!-- champion -->
+                    <td data-cell="points">90</td> <!-- points total -->
+                    <td data-cell="runners-up">Bournemouth</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Nottingham Forest</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Petersborough United, Derby County, Barnsley</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2020-21</td> <!-- year -->
+                    <td data-cell="champion">Norwich City</td> <!-- champion -->
+                    <td data-cell="points">97</td> <!-- points total -->
+                    <td data-cell="runners-up">Watford</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Brentford</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Wycombe Wanderers, Rotherham United, Sheffield Wednesday</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2019-20</td> <!-- year -->
+                    <td data-cell="champion">Leeds United</td> <!-- champion -->
+                    <td data-cell="points">93</td> <!-- points total -->
+                    <td data-cell="runners-up">West Bromwich Albion</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Fulham</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Charlton Athletic, Wigan Athletic, Hull City</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2018-19</td> <!-- year -->
+                    <td data-cell="champion">Norwich City</td> <!-- champion -->
+                    <td data-cell="points">94</td> <!-- points total -->
+                    <td data-cell="runners-up">Sheffield United</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Aston Villa</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Rotherham United, Bolton Wanderers, Ipswich Town</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2017-18</td> <!-- year -->
+                    <td data-cell="champion">Wolverhampton Wanderers</td> <!-- champion -->
+                    <td data-cell="points">99</td> <!-- points total -->
+                    <td data-cell="runners-up">Cardiff City</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Fulham</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Barnsley, Burton Albion, Sunderland</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2016-17</td> <!-- year -->
+                    <td data-cell="champion">Newcastle United</td> <!-- champion -->
+                    <td data-cell="points">94</td> <!-- points total -->
+                    <td data-cell="runners-up">Brighton & Hove Albion</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Huddersfield United</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Blackburn Rovers, Wigan Athletic, Rotherham United</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2015-16</td> <!-- year -->
+                    <td data-cell="champion">Burnley</td> <!-- champion -->
+                    <td data-cell="points">93</td> <!-- points total -->
+                    <td data-cell="runners-up">Middlesborough</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Hull City</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Charlton Athletic, Milton Keynes Dons, Bolton Wanderers</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2014-15</td> <!-- year -->
+                    <td data-cell="champion">Bournemouth</td> <!-- champion -->
+                    <td data-cell="points">90</td> <!-- points total -->
+                    <td data-cell="runners-up">Watford</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Norwich City</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Millwall, Wigan Athletic, Blackpool</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2013-14</td> <!-- year -->
+                    <td data-cell="champion">Leicester City</td> <!-- champion -->
+                    <td data-cell="points">102</td> <!-- points total -->
+                    <td data-cell="runners-up">Burnley</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Queens Park Rangers</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Doncaster Rovers, Barnsley, Yeovil Town</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2012-13</td> <!-- year -->
+                    <td data-cell="champion">Cardiff City</td> <!-- champion -->
+                    <td data-cell="points">87</td> <!-- points total -->
+                    <td data-cell="runners-up">Hull City</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Crystal Palace</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Petersborough United, Wolverhampton Wanderers, Bristol Rovers</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2011-12</td> <!-- year -->
+                    <td data-cell="champion">Reading</td> <!-- champion -->
+                    <td data-cell="points">89</td> <!-- points total -->
+                    <td data-cell="runners-up">Southampton</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">West Ham United</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Portsmouth, Coventry City, Doncaster Rovers</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2010-11</td> <!-- year -->
+                    <td data-cell="champion">Queens Park Rangers</td> <!-- champion -->
+                    <td data-cell="points">88</td> <!-- points total -->
+                    <td data-cell="runners-up">Norwich City</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Swansea City</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Preston North End, Sheffield United, Scunthorpe United</td> <!-- relegated clubs -->
+                </tr>
+                <tr>
+                    <td data-cell="year">2009-10</td> <!-- year -->
+                    <td data-cell="champion">Newcastle United</td> <!-- champion -->
+                    <td data-cell="points">102</td> <!-- points total -->
+                    <td data-cell="runners-up">West Bromwich Albion</td> <!-- runner up -->
+                    <td data-cell="playoff-winner">Blackpool</td> <!-- playoffs winner -->
+                    <td data-cell="relegated">Sheffield Wednesday, Plymouth Argyle, Petersborough United</td> <!-- relegated clubs -->
+                </tr>
+            </table>
+    </section>  
+</body>
+</html>
