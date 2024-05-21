@@ -1,0 +1,91 @@
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100svh;
+  display: grid;
+  place-content: center;
+  font-family: 'Anderson Grotesk', sans-serif;
+}
+
+.card {
+  width: 25rem;
+}
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  transition: transform 3.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  transform: rotateY(0.5turn);
+}
+
+.card__front, 
+.card__back {
+  display: grid;
+  align-content: center;
+  position: absolute;
+  inset: 0;
+  padding: 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card__front {
+  background: url(./assets/warsaw.jpg);
+  background-size: cover;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  inset: 1em;
+  border: 3px solid goldenrod;
+  transform: var(--level-one);
+}
+
+.card__title {
+  color: rgb(40, 29, 1);
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  transform: var(--level-three);
+}
+
+.card__body {
+  font-weight: var(--fw-normal);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  transform: var(--level-two);
+  color: #e0e0e0;
+}
+
+.card__back {
+  transform: rotateY(0.5turn);
+  background: #323809;
+}
+
+.card__back::before {
+  content: '';
+  position: absolute;
+  inset: 1em;
+  border: 3px solid goldenrod;
+  transform: var(--level-one);
+}
