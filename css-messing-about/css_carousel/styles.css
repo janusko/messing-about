@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #F7EBE8;
+  background-color: #121212;
+  /* overflow: hidden; */
+  height: 100vh;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
+/* generic */
+
+.container {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline-start: auto;
+}
+
+.flow {
+  display: grid;
+  gap: var(--flow-spacer, 1rem);
+}
+
+.page-header {
+  padding-block: 5rem;
+  margin-block-end: 5rem;
+  color: #F7EBE8;
+  background-image: url('https://images.pexels.com/photos/7234227/pexels-photo-7234227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position-y: 20%;
+  background-blend-mode: darken, luminosity;
+}
+
+.page-title {
+  font-family: 'Mattone';
+  text-transform: uppercase;
+  color: #E54B4B;
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 0 4px 5px #08090a;
+}
+
+.section-title {
+  text-transform: uppercase;
+  margin-block-start: 3rem;
+  margin-inline-start: 3rem;
+}
+
+
+/* media scroller */
+
+.media-container {
+  position: relative;
+}
+
+.media-scroller,
+.media-group {
+  display: grid;
+  grid-auto-flow: column;
+  gap: .25rem;
+}
+
+.media-scroller {
+  grid-auto-columns: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  scroll-padding-inline: 3rem;
+}
+
+.media-group {
+  grid-auto-columns: 1fr;
+}
+
+.media-element {
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.media-element > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.next,
+.previous {
+  display: none;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  width: 3rem;
+  padding: 1rem;
+  background: #00000000;
+  opacity: 0;
+  transition: background 150ms linear;
+}
+
+.previous {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.next {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.media-group:first-child :where(.next, .previous) {
+  display: flex;
+}
+
+.media-scroller:hover :where(.next, .previous) {
+  opacity: 1;
+}
+
+:where(.next, .previous):hover {
+  background: #00000033;
+}
+
+:where(.next, .previous) > svg {
+  transform: scale(1);
+  transition: transform 75ms linear;
+  height: 100%;
+}
+
+:where(.next, .previous):hover > svg {
+  transform: scale(1.2);
+}
+
+.media-group:target :where(.next, .previous) {
+  display: block;
+}
+
+.media-scroller:has(:target:not(:first-child)) .media-group:first-of-type .next {
+  display: none;
+}
+
+/* navigation indicators */
+
+.navigation-indicators {
+  position: absolute;
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+
+  top: 0;
+  right: 2rem;
+}
+
+.navigation-indicators > * {
+  width: 1rem;
+  height: 3px;
+  background: #F7EBE8;
+  opacity: .5;
+}
+
+.media-scroller:has(.media-group:target) .navigation-indicators > *:nth-child(1){
+  opacity: .5;
+}
+
+.navigation-indicators > *:nth-child(1),
+.media-group:nth-child(1):target ~ .navigation-indicators > *:nth-child(1) {
+  opacity: 1;
+}
+.media-group:nth-child(2):target ~ .navigation-indicators > *:nth-child(2) {
+  opacity: 1;
+}
+.media-group:nth-child(3):target ~ .navigation-indicators > *:nth-child(3) {
+  opacity: 1;
+}
+.media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4) {
+  opacity: 1;
+}
+
+.media-scroller:hover .navigation-indicators {
+  opacity: 1;
+}
