@@ -1,0 +1,261 @@
+/* -----
+  ROOT
+------ */
+:root {
+  --clr-primary: #DB5461;
+  --clr-accent: #4873A7;
+
+  --fs-700: 3.5rem;
+  --fs-400: 1.25rem;
+}
+
+/* ------
+  RESET
+------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, 
+h1, 
+h2, 
+h3, 
+h4, 
+p,
+figure, 
+blockquote, 
+dl, 
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, 
+h2, 
+h3, 
+h4,
+button, 
+input, 
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, 
+h2,
+h3, 
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, 
+button,
+textarea, 
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  color: #FAFAFA;
+  background-color: #000000;
+  padding: 20vw 0;
+  /* padding just for example of building out this section*/
+  font-family: sans-serif;
+  font-size: var(--fs-400);
+  min-height: 100vh;
+  line-height: 1.5;
+
+  overflow-x: hidden;
+}
+
+
+
+/* ----------------
+  UTILITY CLASSES
+----------------- */
+
+/* displays */
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding: 0 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.large-gap {
+  --gap: 3rem;
+}
+
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+
+/* typographies */
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-accent {
+  color: var(--clr-accent);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+  line-height: 1;
+}
+
+
+/* featured grid */
+.feature-grid-container {
+  perspective: 100rem;
+  position: relative;
+}
+
+.feature-grid-text {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    90deg,
+    hsl(0 0% 0% / .8) 75%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.feature-grid {
+  position: relative;
+  width: 55rem;
+  left: min(calc((1000px - 100vw) * -1), -20px);
+  z-index: -1;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-self: center;
+
+  transform-origin: left;
+  transform: rotateY(-40deg);
+}
+
+.feature-grid > a {
+  border-radius: .75em;
+  overflow: hidden;
+
+  transition: transform 350ms ease-in-out;
+}
+
+.feature-grid > :nth-child(1),
+.feature-grid > :nth-child(4),
+.feature-grid > :nth-child(5),
+.feature-grid > :nth-child(7) {
+  grid-row: span 3;
+}
+
+.feature-grid > :nth-child(2),
+.feature-grid > :nth-child(3) {
+  grid-row: span 2;
+}
+
+.feature-grid > :nth-child(6) {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 4;
+}
+
+.feature-grid > a:hover,
+.feature-grid > a:focus-visible {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.5rem hsl(0 0% 100% / .8);
+}
+
+.grid--columns {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+
+/* buttons */
+.btn {
+  color: #000000;
+  width: 10rem;
+  text-align: center;
+  text-decoration: none;
+  margin-block-start: 2rem;
+  padding: 0.5em 2em;
+  border-radius: .5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    45deg,
+    #DB5461,
+    #A82431,
+    #430E14
+  );
+}
+
+.btn-accent {
+  background: linear-gradient(
+    45deg,
+    #E3F2FD,
+    #4873A7,
+    #232323
+  );
+}
+
