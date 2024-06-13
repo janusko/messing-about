@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(200 50% 5%);
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  max-width: 80rem;
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 5rem;
+  padding-inline: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.image-gallery {
+  display: grid;
+  max-width: 80rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.image-gallery > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  transition: scale 350ms ease, opacity 350ms linear;
+}
+
+.image-gallery:has(img:hover) img:not(:hover) {
+  scale: .8;
+  opacity: .7;
+}
