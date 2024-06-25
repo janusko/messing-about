@@ -243,3 +243,47 @@ div > p {
 .burger.burger-5.is-closed::after {
   transform: rotate(45deg) translate(-.125rem, -.1875rem);
 }
+
+
+/* --------
+  BURGER 6
+---------- */
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: scaleY(0.8) scaleX(1.2);
+}
+
+.burger-6.is-closed.hamRotate {
+  transform: rotate(45deg) scale(1.2);
+}
+
+.line {
+  fill: none;
+  stroke: #f9f9f9;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: 400ms;
+}
+
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+
+.burger-6.is-closed.ham1 .top {
+  stroke-dashoffset: -6.125rem;
+}
+
+.burger-6.is-closed.ham1 .bottom {
+  stroke-dashoffset: -8.625rem;
+}
